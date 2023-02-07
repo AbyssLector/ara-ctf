@@ -1,10 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="jumbotron">
-	<div class="container">
-		<h1>Scoreboard</h1>
+<div class="relative jumbotron">
+	<img src="https://www.its-ara.com/public/home/half_eclipse.png" class="half-circle">
+	<img src="https://www.its-ara.com/public/home/Clapping%20hands.png" class="clap absolute">
+	<div class="flex scoreboard">
+		<img src="https://www.its-ara.com/public/home/star.png" class="">
+		<div class="text-white scoreboard-text mx-15">
+			Scoreboard
+		</div>
+		<img src="https://www.its-ara.com/public/home/star.png" class="">
 	</div>
+	<img src="https://www.its-ara.com/public/aboutara/love.svg" class="heart absolute">
+	<img src="https://www.its-ara.com/public/home/up%20circle.png" class="up-circle absolute">
 </div>
 <div class="container">
 	{% include "components/errors.html" %}

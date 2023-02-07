@@ -4,10 +4,18 @@
 {% endblock %}
 
 {% block content %}
-<div class="jumbotron">
-	<div class="container">
-		<h1>Teams</h1>
+<div class="jumbotron relative">
+	<img src="https://www.its-ara.com/public/home/half_eclipse.png" class="half-circle">	
+	<img src="https://www.its-ara.com/public/home/Clapping%20hands.png" class="clap absolute">
+	<div class="flex scoreboard">
+		<img src="https://www.its-ara.com/public/home/star.png" class="">
+		<div class="text-white scoreboard-text mx-15">
+			Teams
+		</div>
+		<img src="https://www.its-ara.com/public/home/star.png" class="">
 	</div>
+	<img src="https://www.its-ara.com/public/aboutara/love.svg" class="heart absolute">
+	<img src="https://www.its-ara.com/public/home/up%20circle.png" class="up-circle absolute">
 </div>
 <div class="container">
 	<div class="row">
@@ -24,13 +32,13 @@
 			{% with form = Forms.teams.PublicTeamSearchForm(field=field, q=q) %}
 			<form method="GET" class="form-inline">
 				<div class="form-group col-md-2">
-					{{ form.field(class="form-control custom-select w-100") }}
+					{{ form.field(class="team-selector custom-select w-100") }}
 				</div>
 				<div class="form-group col-md-8">
-					{{ form.q(class="form-control w-100", placeholder="Search for matching teams") }}
+					{{ form.q(class="search-bar w-100", placeholder="Search for matching teams") }}
 				</div>
 				<div class="form-group col-md-2">
-					<button type="submit" class="btn btn-primary w-100">
+					<button type="submit" class="team-button">
 						<i class="fas fa-search" aria-hidden="true"></i>
 					</button>
 				</div>

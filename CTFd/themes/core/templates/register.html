@@ -4,10 +4,14 @@
 {% endblock %}
 
 {% block content %}
-<div class="jumbotron">
-	<div class="container">
-		<h1>Register</h1>
+<div class="jumbotron relative y-hidden">
+	<img src="https://www.its-ara.com/public/home/zoom.png" class="absolute zoom">
+	<img src="https://www.its-ara.com/public/aboutara/hand.svg" class="absolute hand">
+	<div class="container login-jumbotron">
+		<h1><img src="https://www.its-ara.com/public/login/smile.png"> Register <img src="https://www.its-ara.com/public/login/smile.png"></h1>
 	</div>
+	<img src="https://www.its-ara.com/public/global/Group%20430.png" class="absolute right-line">
+	<img src="https://www.its-ara.com/public/global/Group%20431.png" class="absolute left-line">
 </div>
 <div class="container">
 	<div class="row">
@@ -27,21 +31,21 @@
 			<form method="post" accept-charset="utf-8" autocomplete="off" role="form">
 				<div class="form-group">
 					<b>{{ form.name.label }}</b>
-					{{ form.name(class="form-control", value=name) }}
+					{{ form.name(class="user-login", value=name) }}
 					<small class="form-text text-muted">
 						Your username on the site
 					</small>
 				</div>
 				<div class="form-group">
 					<b>{{ form.email.label }}</b>
-					{{ form.email(class="form-control", value=email) }}
+					{{ form.email(class="user-login", value=email) }}
 					<small class="form-text text-muted">
 						Never shown to the public
 					</small>
 				</div>
 				<div class="form-group">
 					<b>{{ form.password.label }}</b>
-					{{ form.password(class="form-control", value=password) }}
+					{{ form.password(class="user-login", value=password) }}
 					<small class="form-text text-muted">
 						Password used to log into your account
 					</small>
@@ -51,8 +55,8 @@
 				{{ render_extra_fields(form.extra) }}
 
 				<div class="row pt-3">
-					<div class="col-md-12">
-						{{ form.submit(class="btn btn-md btn-primary btn-outlined float-right") }}
+					<div class="col-md-12 regist-parent">
+						{{ form.submit(class="regist-btn") }}
 					</div>
 				</div>
 
